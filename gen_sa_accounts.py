@@ -116,11 +116,8 @@ def _batch_keys_resp(id, resp, exception):
         sleep(sleep_time / 100)
     elif current_key_dump is None:
         sleep(sleep_time / 100)
-    else:
-        current_key_dump.append((
-            resp['name'][resp['name'].rfind('/'):],
-            b64decode(resp['privateKeyData']).decode('utf-8')
-        ))
+
+
 
 
 # Create Keys
@@ -144,12 +141,7 @@ def _create_sa_keys(iam, projects, path):
             if current_key_dump is None:
                 print('Redownloading keys from %s' % i)
                 current_key_dump = []
-            else:
-                for index, j in enumerate(current_key_dump):
-                    with open(f'{path}/{index}.json', 'w+') as f:
-                        f.write(j[1])
-
-
+           
 # Delete Service Accounts
 def _delete_sas(iam, project):
     sas = _list_sas(iam, project)
