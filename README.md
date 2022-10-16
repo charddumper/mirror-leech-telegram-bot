@@ -13,10 +13,7 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 - View Link button, extra button to open file index link in broswer instead of direct download
 - Status Pages for unlimited tasks
 - Clone status
-- Search in multiple Drive folder/TeamDrive
-- Recursive Search (only with `root` or TeamDrive ID, folder ids will be listed with non-recursive method)
-- Multi-TD list by token.pickle if exists
-- Extract rar, zip and 7z splits with or without password
+
 - Zip file/folder with or without password
 - Use Token.pickle if file not found with Service Account for all Gdrive functions
 - Random Service Account at startup
